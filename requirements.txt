@@ -2,3 +2,4 @@ cloudscraper
 bs4
 pandas
 numpy
+lxml
