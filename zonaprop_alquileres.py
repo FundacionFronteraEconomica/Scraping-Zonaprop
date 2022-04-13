@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup as soup, element
 import pandas as pd
 import numpy as np
 import time
+import lxml
 
 zonaprop_titulo = []
 zonaprop_ubicacion = []
@@ -21,7 +22,7 @@ for i in paginas:
     if i == 0:
         scraper = cloudscraper.create_scraper(
             browser={
-                'browser': 'chrome',
+                'browser': 'firefox',
                 'platform': 'windows',
                 'mobile': False
             }
@@ -29,13 +30,9 @@ for i in paginas:
 
         url = "https://www.zonaprop.com.ar/inmuebles-alquiler-posadas.html"
         response = scraper.get(url)
-        time.sleep(5)
         sopa = soup(response.text, features='lxml')
-        time.sleep(5)
         propiedades = sopa.find(id="react-posting-cards")
-        time.sleep(5)
         lista_propiedades = propiedades.find_all('div', class_="postingCardContent")
-        time.sleep(5)
 
         for propiedad in lista_propiedades:
             titulo_propiedad = propiedad.find('a', {'class' : 'go-to-posting'})
