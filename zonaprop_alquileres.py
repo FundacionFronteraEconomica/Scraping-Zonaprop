@@ -33,8 +33,8 @@ for i in paginas:
         sopa = soup(response.text)
         with  open("prueba.txt", "w") as file:
             content = str(sopa)
-            file.write(content)
-            file.write('sdasdsadsa')
+            content2 = "hola duendes"
+            file.write(content2)
             file.close()
     else:
         pass
