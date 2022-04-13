@@ -1,41 +1,39 @@
-# import cloudscraper
-# from bs4 import BeautifulSoup as soup, element
-# import pandas as pd
-# import numpy as np
-# import time
-# import lxml
+import cloudscraper
+from bs4 import BeautifulSoup as soup, element
+import pandas as pd
+import numpy as np
+import time
+import lxml
 
-# zonaprop_titulo = []
-# zonaprop_ubicacion = []
-# zonaprop_precio = []
-# zonaprop_divisa = []
-# zonaprop_superficie = []
-# zonaprop_ambientes = []
-# zonaprop_dormitorios = []
-# zonaprop_baños = []
-# columnas = ['Titulo Publicacion', 'Ubicacion', 'Precio', 'Divisa', 'Superficie(M2)', 'Ambientes', 'Dormitorios', 'Baños']
+zonaprop_titulo = []
+zonaprop_ubicacion = []
+zonaprop_precio = []
+zonaprop_divisa = []
+zonaprop_superficie = []
+zonaprop_ambientes = []
+zonaprop_dormitorios = []
+zonaprop_baños = []
+columnas = ['Titulo Publicacion', 'Ubicacion', 'Precio', 'Divisa', 'Superficie(M2)', 'Ambientes', 'Dormitorios', 'Baños']
 
-f = open("FundacionFronteraEconomica\Scraping-Zonaprop\prueba.txt", "w")
-f.write("probando si funciona")
-f.close()
+paginas = [i for i in range(4)]
+paginas.remove(1)
 
-# paginas = [i for i in range(4)]
-# paginas.remove(1)
+for i in paginas:
+    if i == 0:
+        scraper = cloudscraper.create_scraper(
+            browser={
+                'browser': 'firefox',
+                'platform': 'windows',
+                'mobile': False
+            }
+        )
 
-# for i in paginas:
-#     if i == 0:
-#         scraper = cloudscraper.create_scraper(
-#             browser={
-#                 'browser': 'firefox',
-#                 'platform': 'windows',
-#                 'mobile': False
-#             }
-#         )
-
-#         url = "https://www.zonaprop.com.ar/inmuebles-alquiler-posadas.html"
-#         response = scraper.get(url)
-#         sopa = soup(response.text)
-        
+        url = "https://www.zonaprop.com.ar/inmuebles-alquiler-posadas.html"
+        response = scraper.get(url)
+        sopa = soup(response.text)
+        print(sopa)
+    else:
+        print("no se pudo")
 #         propiedades = sopa.find(id="react-posting-cards")
 #         lista_propiedades = propiedades.find_all('div', class_="postingCardContent")
 
