@@ -5,17 +5,17 @@
 # import time
 # import lxml
 
-zonaprop_titulo = []
-zonaprop_ubicacion = []
-zonaprop_precio = []
-zonaprop_divisa = []
-zonaprop_superficie = []
-zonaprop_ambientes = []
-zonaprop_dormitorios = []
-zonaprop_baños = []
-columnas = ['Titulo Publicacion', 'Ubicacion', 'Precio', 'Divisa', 'Superficie(M2)', 'Ambientes', 'Dormitorios', 'Baños']
+# zonaprop_titulo = []
+# zonaprop_ubicacion = []
+# zonaprop_precio = []
+# zonaprop_divisa = []
+# zonaprop_superficie = []
+# zonaprop_ambientes = []
+# zonaprop_dormitorios = []
+# zonaprop_baños = []
+# columnas = ['Titulo Publicacion', 'Ubicacion', 'Precio', 'Divisa', 'Superficie(M2)', 'Ambientes', 'Dormitorios', 'Baños']
 
-f = open("prueba.txt", "a")
+f = open(".\prueba.txt", "w")
 f.write("probando si funciona")
 f.close()
 
