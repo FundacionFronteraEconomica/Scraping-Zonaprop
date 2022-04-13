@@ -1,6 +1,4 @@
 cloudscraper
-requests
-time
 bs4
 pandas
 numpy
