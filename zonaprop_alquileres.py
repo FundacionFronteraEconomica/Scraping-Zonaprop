@@ -32,7 +32,7 @@ for i in paginas:
         response = scraper.get(url)
         sopa = soup(response.text)
         with  open("prueba.txt", "w") as file:
-            content = sopa
+            content = str(sopa)
             file.write(content)
             file.close()
     else:
