@@ -15,7 +15,7 @@
 # zonaprop_baños = []
 # columnas = ['Titulo Publicacion', 'Ubicacion', 'Precio', 'Divisa', 'Superficie(M2)', 'Ambientes', 'Dormitorios', 'Baños']
 
-f = open(".\prueba.txt", "w")
+f = open("FundacionFronteraEconomica\Scraping-Zonaprop\prueba.txt", "w")
 f.write("probando si funciona")
 f.close()
 
