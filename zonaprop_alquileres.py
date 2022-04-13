@@ -34,6 +34,7 @@ for i in paginas:
         with  open("prueba.txt", "w") as file:
             content = str(sopa)
             file.write(content)
+            file.write('sdasdsadsa')
             file.close()
     else:
         pass
