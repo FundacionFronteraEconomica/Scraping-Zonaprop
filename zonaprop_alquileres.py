@@ -31,7 +31,7 @@ for i in paginas:
         url = "https://www.zonaprop.com.ar/inmuebles-alquiler-posadas.html"
         response = scraper.get(url)
         sopa = soup(response.text)
-        with  open("Scraping-Zonaprop/prueba.txt", "w") as file:
+        with  open("./prueba.txt", "w") as file:
             content = str(sopa)
             file.write(content)
             file.close()
