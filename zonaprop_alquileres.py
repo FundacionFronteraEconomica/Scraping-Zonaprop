@@ -15,28 +15,27 @@ zonaprop_dormitorios = []
 zonaprop_baños = []
 columnas = ['Titulo Publicacion', 'Ubicacion', 'Precio', 'Divisa', 'Superficie(M2)', 'Ambientes', 'Dormitorios', 'Baños']
 
-paginas = [i for i in range(4)]
-paginas.remove(1)
-
-for i in paginas:
-    if i == 0:
-        scraper = cloudscraper.create_scraper(
-            browser={
-                'browser': 'firefox',
-                'platform': 'windows',
-                'mobile': False
-            }
-        )
-
-        url = "https://www.zonaprop.com.ar/inmuebles-alquiler-posadas.html"
-        response = scraper.get(url)
-        sopa = soup(response.text)
-        with  open("./prueba.txt", "w") as file:
-            content = str(sopa)
-            file.write(content)
+with  open("./prueba.txt", "w") as file:
+            file.write("probando si funciona")
             file.close()
-    else:
-        pass
+
+# paginas = [i for i in range(4)]
+# paginas.remove(1)
+
+# for i in paginas:
+#     if i == 0:
+#         scraper = cloudscraper.create_scraper(
+#             browser={
+#                 'browser': 'firefox',
+#                 'platform': 'windows',
+#                 'mobile': False
+#             }
+#         )
+
+#         url = "https://www.zonaprop.com.ar/inmuebles-alquiler-posadas.html"
+#         response = scraper.get(url)
+#         sopa = soup(response.text)
+        
 #         propiedades = sopa.find(id="react-posting-cards")
 #         lista_propiedades = propiedades.find_all('div', class_="postingCardContent")
 
