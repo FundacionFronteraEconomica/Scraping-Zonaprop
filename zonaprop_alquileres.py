@@ -1,9 +1,9 @@
-import cloudscraper
-from bs4 import BeautifulSoup as soup, element
-import pandas as pd
-import numpy as np
-import time
-import lxml
+# import cloudscraper
+# from bs4 import BeautifulSoup as soup, element
+# import pandas as pd
+# import numpy as np
+# import time
+# import lxml
 
 zonaprop_titulo = []
 zonaprop_ubicacion = []
@@ -15,7 +15,7 @@ zonaprop_dormitorios = []
 zonaprop_baños = []
 columnas = ['Titulo Publicacion', 'Ubicacion', 'Precio', 'Divisa', 'Superficie(M2)', 'Ambientes', 'Dormitorios', 'Baños']
 
-with  open("./prueba.txt", "w") as file:
+with  open("prueba.txt", "w") as file:
             file.write("probando si funciona")
             file.close()
 
