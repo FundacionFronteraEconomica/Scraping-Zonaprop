@@ -35,7 +35,7 @@ for i in paginas:
             content = sopa
             file.write(content)
             file.close()
-     else:
+    else:
         pass
 #         propiedades = sopa.find(id="react-posting-cards")
 #         lista_propiedades = propiedades.find_all('div', class_="postingCardContent")
