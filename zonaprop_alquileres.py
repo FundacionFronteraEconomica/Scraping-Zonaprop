@@ -21,6 +21,7 @@ paginas.remove(1)
 for i in paginas:
     if i == 0:
         scraper = cloudscraper.create_scraper(
+            interpreter='nodejs',
             delay=10,
             browser={
                 'browser': 'firefox',
