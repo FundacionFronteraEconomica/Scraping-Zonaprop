@@ -22,9 +22,7 @@ for i in paginas:
     if i == 0:
         scraper = cloudscraper.create_scraper(
             browser={
-                'browser': 'chrome',
-                'platform': 'android',
-                'desktop': False
+                'custom': 'ScraperBot/1.0'
             }
         )
 
