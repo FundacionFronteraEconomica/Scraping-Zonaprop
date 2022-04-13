@@ -1,6 +1,4 @@
 import cloudscraper
-import requests
-import time
 from bs4 import BeautifulSoup as soup, element
 import pandas as pd
 import numpy as np
