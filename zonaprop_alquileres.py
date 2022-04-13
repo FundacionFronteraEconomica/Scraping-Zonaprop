@@ -15,7 +15,6 @@ columnas = ['Titulo Publicacion', 'Ubicacion', 'Precio', 'Divisa', 'Superficie(M
 
 paginas = [i for i in range(4)]
 paginas.remove(1)
-# print(paginas)
 
 for i in paginas:
     if i == 0:
