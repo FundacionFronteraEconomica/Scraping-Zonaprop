@@ -32,7 +32,7 @@ for i in paginas:
 
         url = "https://www.zonaprop.com.ar/inmuebles-alquiler-posadas.html"
         response = scraper.get(url)
-        sopa = soup(response.text)
+        sopa = soup(response.text, features='lxml')
         print(sopa)
         propiedades = sopa.find(id="react-posting-cards")
         print(propiedades)
