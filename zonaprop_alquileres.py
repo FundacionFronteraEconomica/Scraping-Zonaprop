@@ -15,9 +15,9 @@ zonaprop_dormitorios = []
 zonaprop_baños = []
 columnas = ['Titulo Publicacion', 'Ubicacion', 'Precio', 'Divisa', 'Superficie(M2)', 'Ambientes', 'Dormitorios', 'Baños']
 
-with  open("prueba.txt", "w") as file:
-            file.write("probando si funciona")
-            file.close()
+f = open("prueba.txt", "w")
+f.write("probando si funciona")
+f.close()
 
 # paginas = [i for i in range(4)]
 # paginas.remove(1)
